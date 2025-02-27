@@ -21,23 +21,6 @@ def crackPassword(hash_entry):
     
     return crackedpass
 
-"""
-with open('shadow.txt', 'r') as file:
-    for line in file:
-        salthash1 = line.split(':')[1]
-        salt1 = salthash1[:29:].encode()
-        break
-#salt1 = gensalt()
-word1 = "lampoon"
-hash1 = hashpw(word1.encode(), salt1)
-newwords = ["variety", "scapula", "lampoon", "griffin"]
-for word in newwords:
-        word_hash = hashpw(word.encode(), salt1)
-        if word_hash == hash1:
-            print("Word: " + word + ", Hash: " + str(word_hash))
-            break
-"""
-
 def main():
     passwords = []
     with open('shadow.txt', 'r') as file:
